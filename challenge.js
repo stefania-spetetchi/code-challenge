@@ -11,20 +11,16 @@ const findFrequency = function(array) {
 
 let countedLetters = array.reduce(function (fullArray, count) {
   if (count in fullArray) {
-    fullArray[count]++
+    fullArray[count]++;
   }
   else {
-    fullArray[count] = 1
+    fullArray[count] = 1;
   }
-  return fullArray
-}, {})
-
-//console.log(countedLetters);
+  return fullArray;
+}, {});
 
 sorted = Object.keys(countedLetters).sort(function(a,b) {
   return countedLetters[b]- countedLetters[a]});
-
-//console.log(sorted);
 
 let findFrequency = {
   most : sorted[0],
